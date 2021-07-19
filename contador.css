@@ -6,32 +6,38 @@
 
 body {
   width: 100%;
-  font: normal bold 16px / normal tahoma;
+  /* font: normal bold 16px / normal tahoma; */
+  background-color: #edf6f9;
 }
 
 article {
   width: 300px;
   text-align: center;
-  background-color: #68b04d;
+  background-color: #006d77;
   border-radius: 10px;
   margin: 50px auto 20px;
   padding: 5px;
   overflow: hidden;
   box-shadow: 3px 3px 10px #ccc;
+  color: #fff;
+  padding: 5px 10px;
 }
 
 article h3 {
   padding: 10px;
-  color: #fff;
 }
 
 article .count {
-  padding: 5px;
+  padding: 5px 0;
 }
 
 article #timer {
   padding: 5px;
-  color: crimson;
-  background-color: aliceblue;
+  color: #006d77;
+  background-color: #edf6f9;
   border-radius: 2px;
+}
+
+article button {
+  margin: 5px;
 }

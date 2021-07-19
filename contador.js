@@ -1,11 +1,15 @@
 window.addEventListener("load", () => {
-  const botao = document.getElementById("botao");
+  const botaoStart = document.getElementById("start-button");
+  const botaoReset = document.getElementById("reset-button");
+  const countDiv = document.getElementById("timer");
 
-  botao.addEventListener("click", () => {
+  botaoStart.addEventListener("click", () => {
+    let hours = document.getElementById("hours").value;
+    let minutes = document.getElementById("minutes").value;
+    let seconds = document.getElementById("seconds").value;
+
     // Tempo, em segundos, que queremos.
-    let sec = 360;
-
-    const countDiv = document.getElementById("timer");
+    let sec = +seconds + +minutes * 60 + +hours * 3600;
 
     const secpass = () => {
       let min = Math.floor(sec / 60);
@@ -26,10 +30,15 @@ window.addEventListener("load", () => {
       if (sec > 0) {
         sec = sec - 1;
       } else {
-        countDiv.innerHTML = "Acabou!";
+        countDiv.innerHTML = "Finished!";
       }
     };
 
     const countDown = setInterval(() => secpass(), 1000);
   });
+
+  // botaoReset.addEventListener("click", () => {
+  //   sec = 0;
+  //   countDiv.innerHTML = "Reset!";
+  // });
 });
